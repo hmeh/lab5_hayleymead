@@ -13,14 +13,15 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form method="get" action="login_form">
+        <form method="POST" action="login">
             <label>Username: </label>
-            <input type="text" name="username" value="">
+            <input type="text" name="username_form" value="${username}">
             <br>
             <label>Password: </label>
-            <input type="text" name="password" value="">
+            <input type="text" name="password_form" value="${password}">
             <br>
             <input type="submit" name="login" value="login">
+            <p>${invalidLogin_display}</p>
             
         </form>
     </body>

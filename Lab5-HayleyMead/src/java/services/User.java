@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  * @author Hayley
  */
-class User implements Serializable{
+public class User implements Serializable{
     public String username;
     public String password;
 
