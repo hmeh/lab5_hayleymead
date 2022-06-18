@@ -41,6 +41,7 @@ public class LoginServlet extends HttpServlet {
             return;
         }else{
              getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+             response.sendRedirect("home");
              return;
         }  
        
@@ -69,8 +70,9 @@ public class LoginServlet extends HttpServlet {
             if(user != null){
                session.setAttribute("username_display", username);
                response.sendRedirect("home"); 
-            }else{
+            }else{       
                request.setAttribute("invalidLogin_display", "Invalid username or password");
+               getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             }
             
         }   

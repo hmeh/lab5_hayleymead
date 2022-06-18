@@ -22,6 +22,7 @@
             <br>
             <input type="submit" name="login" value="login">
             <p>${invalidLogin_display}</p>
+            <p>${logout_success}</p>
             
         </form>
     </body>
